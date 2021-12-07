@@ -2,6 +2,7 @@
   <div class="Resume">
     <h1>{{ message }}</h1>
     <div v-for="student in students" v-bind:key="student.id">
+      <p><img v-bind:src="student.photo" class="img-thumbnail" alt="profile picture"></p>
       <h2>{{ student.first_name }}</h2>
       <h2> {{ student.last_name }}</h2>
       <p>{{ student.email }}</p>
@@ -12,7 +13,6 @@
       <p>{{ student.website_url }}</p>
       <p>{{ student.resume_url }}</p>
       <p>{{ student.github_url }}</p>
-      <p>{{ student.photo }}</p>
     </div>
   </div>
 </template>
