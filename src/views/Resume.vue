@@ -14,6 +14,13 @@
       <p>{{ student.resume_url }}</p>
       <p>{{ student.github_url }}</p>
     </div>
+    <div v-for="experience in experiences" v-bind:key="experience.id">
+      <p>Start Date: {{ experience.start_date }}</p>
+      <p>End Date: {{ experience.end_date }}</p>
+      <p>Job Title: {{ experience.job_title }}</p>
+      <p>Company Name: {{ experience.company_name }}</p>
+      <p>Details: {{ experience.details }}</p>
+    </div>
   </div>
 </template>
 
@@ -26,17 +33,26 @@ import axios from "axios";
       return {
         message: "Vue my Resume!",
         students: {},
+        experiences: {},
       };
     },
     created: function () {
       this.indexStudents();
+      this.indexExperiences();
     },
     methods: {
       indexStudents: function () {
-        console.log("View all information");
+        console.log("View student details");
         axios.get("http://localhost:3000/students").then((response) => {
           console.log(response.data);
           this.students = response.data;
+        });
+      },
+      indexExperiences: function () {
+        console.log("View experiences");
+        axios.get("http://localhost:3000/experiences").then((response) => {
+          console.log(response.data);
+          this.experiences = response.data;
         });
       },
     },
