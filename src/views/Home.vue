@@ -1,23 +1,34 @@
 <template>
-  <div class="home">
-    <h1>{{ message }}</h1>
-
-<p> <TwitterFeed src="https://twitter.com/jack?ref_src=twsrc%5Etfw"></TwitterFeed>
-</p>
-
-  </div>
+  <a
+    class="twitter-timeline"
+    data-width="250"
+    data-height="500"
+    :href="src"
+    :data-theme="dark ? 'dark' : 'light'"
+    :data-link-color="dataLinkColor"
+  ></a>
 </template>
-
-<style></style>
 
 <script>
 export default {
-  data: function () {
-    return {
-      message: "Welcome to Vue.js!",
-    };
+  props: {
+    src: {
+      type: String,
+      default: "https://twitter.com/vuejs?ref_src=twsrc%5Etfw"
+    },
+    dark: {
+      type: Boolean,
+      default: false
+    },
+    dataLinkColor: {
+      type: String,
+      default: "#2B7BB9"
+    }
   },
-  created: function () {},
-  methods: {},
+  created() {
+    let twitterFeed = document.createElement("script");
+    twitterFeed.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    document.head.appendChild(twitterFeed);
+  }
 };
 </script>
