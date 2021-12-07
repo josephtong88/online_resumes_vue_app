@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-3">
           <div class="headers">
-            Jonathan Miksis
+            Joe Smith
           </div>
         </div>
         <div class="col-9">
@@ -34,8 +34,7 @@
           <b>Address:</b>
           <br>
           </div>
-          200 Quarry Hills Drive
-          Quincy, MA 02169
+            123 Woo Drive
         </div>
         <div class="col-9">
           2 of 3
@@ -47,7 +46,7 @@
           <div class="headers">
           <b>Phone:</b>
           </div>
-          (603) 812-7478
+          (823)23302834
           <br>
         </div>
         <div class="col-9">
@@ -60,7 +59,7 @@
           <div class="headers">
           <b>Email:</b>
           </div>
-          jmiksis13@gmail.com
+          joesmith@gmail.com
           <br>
         </div>
         <div class="col-9">
