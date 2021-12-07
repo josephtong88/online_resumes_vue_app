@@ -21,6 +21,22 @@
       <p>Company Name: {{ experience.company_name }}</p>
       <p>Details: {{ experience.details }}</p>
     </div>
+    <div v-for="education in educations" v-bind:key="education.id">
+      <p>Start Date: {{ education.start_date }}</p>
+      <p>End Date: {{ education.end_date }}</p>
+      <p>Degree: {{ education.degree }}</p>
+      <p>University Name: {{ education.university_name }}</p>
+      <p>Details: {{ education.details }}</p>
+    </div>
+    <div v-for="skill in skills" v-bind:key="skill.id">
+      <p>{{ skill.skill_name }}</p>
+    </div>
+    <div v-for="capstone in capstones" v-bind:key="capstone.id">
+      <p>{{ capstone.name }}</p>
+      <p>{{ capstone.description }}</p>
+      <p>{{ capstone.url }}</p>
+      <p>{{ capstone.screenshot }}</p>
+    </div>
   </div>
 </template>
 
@@ -34,11 +50,17 @@ import axios from "axios";
         message: "Vue my Resume!",
         students: {},
         experiences: {},
+        educations: {},
+        skills: {},
+        capstones: {}
       };
     },
     created: function () {
       this.indexStudents();
       this.indexExperiences();
+      this.indexEducations();
+      this.indexSkills();
+      this.indexCapstones();
     },
     methods: {
       indexStudents: function () {
@@ -53,6 +75,28 @@ import axios from "axios";
         axios.get("http://localhost:3000/experiences").then((response) => {
           console.log(response.data);
           this.experiences = response.data;
+        });
+      },
+      indexEducation: function () {
+        console.log("View education");
+        axios.get("http://localhost:3000/educations").then((response) => {
+          console.log(response.data);
+          this.educataions = response.data;
+        });
+      },
+      indexSkills: function () {
+        console.log("View Skills");
+        axios.get("http://localhost:3000/Skills").then((response) => {
+          console.log(response.data);
+          this.skills = response.data;
+        });
+      },
+      indexCapstone: function () {
+        console.log("View Capstone");
+        axios.get("http://localhost:3000/capstones").then(
+          (response) => {
+            console.log(response.data);
+            this.capstones = response.data;
         });
       },
     },
