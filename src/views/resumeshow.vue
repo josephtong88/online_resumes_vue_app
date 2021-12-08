@@ -1,8 +1,8 @@
 <template>
-  <div class="Resume2">
+  <div class="resumeshow">
     <h1>{{ message }}</h1>
     <div v-for="student in students" v-bind:key="student.id">
-      <h2>Student.first name</h2>
+      <h2>{{ Student.first_name }}</h2>
       <h2>{{ student.last_name }}</h2>
       <p>{{ student.email }}</p>
       <p>{{ student.phone_number }}</p>
@@ -65,35 +65,35 @@ export default {
   methods: {
     indexStudents: function () {
       console.log("View student details");
-      axios.get("http://localhost:3000/students").then((response) => {
+      axios.get("http://localhost:3000/students/" + this.$route.params.id).then((response) => {
         console.log(response.data);
         this.students = response.data;
       });
     },
     indexExperiences: function () {
       console.log("View experiences");
-      axios.get("http://localhost:3000/experiences").then((response) => {
+      axios.get("http://localhost:3000/experiences"+ this.$route.params.id).then((response) => {
         console.log(response.data);
         this.experiences = response.data;
       });
     },
     indexEducation: function () {
       console.log("View education");
-      axios.get("http://localhost:3000/educations").then((response) => {
+      axios.get("http://localhost:3000/educations"+ this.$route.params.id).then((response) => {
         console.log(response.data);
         this.educataions = response.data;
       });
     },
     indexSkills: function () {
       console.log("View Skills");
-      axios.get("http://localhost:3000/Skills").then((response) => {
+      axios.get("http://localhost:3000/Skills"+ this.$route.params.id).then((response) => {
         console.log(response.data);
         this.skills = response.data;
       });
     },
     indexCapstone: function () {
       console.log("View Capstone");
-      axios.get("http://localhost:3000/capstones").then((response) => {
+      axios.get("http://localhost:3000/capstones"+ this.$route.params.id).then((response) => {
         console.log(response.data);
         this.capstones = response.data;
       });
