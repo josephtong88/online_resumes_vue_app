@@ -6,69 +6,8 @@
       <router-link to="/resume">Resume</router-link>
     </div>
     <router-view />
-    <div class="container">
-      <div class="row">
-        <div class="col-3">
-          <div class="headers">
-            Joe Smith
-          </div>
-        </div>
-        <div class="col-9">
-          2 of 2
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <div class="headers">
-          Contact
-          <hr>
-          </div>
-        </div>
-        <div class="col-9">
-          2 of 3
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <div class="headers">
-          <b>Address:</b>
-          <br>
-          </div>
-            123 Woo Drive
-        </div>
-        <div class="col-9">
-          2 of 3
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <br>
-          <div class="headers">
-          <b>Phone:</b>
-          </div>
-          (823)23302834
-          <br>
-        </div>
-        <div class="col-9">
-          2 of 3
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <br>
-          <div class="headers">
-          <b>Email:</b>
-          </div>
-          joesmith@gmail.com
-          <br>
-        </div>
-        <div class="col-9">
-          2 of 3
-        </div>
-      </div>
-</div>
-
   </div>
+
 </template>
 
 <style>
