@@ -14,7 +14,7 @@ export default {
   props: {
     src: {
       type: String,
-      default: "https://twitter.com/vuejs?ref_src=twsrc%5Etfw"
+      default: "https://twitter.com/elmo?ref_src=twsrc%5Etfw"
     },
     dark: {
       type: Boolean,

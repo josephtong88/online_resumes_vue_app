@@ -1,8 +1,8 @@
 <template>
-  <div class="Resume">
+  <div class="Resume2">
     <h1>{{ message }}</h1>
     <div v-for="student in students" v-bind:key="student.id">
-      <h2>{{ student.first_name }}</h2>
+      <h2>Student.first name</h2>
       <h2>{{ student.last_name }}</h2>
       <p>{{ student.email }}</p>
       <p>{{ student.phone_number }}</p>
